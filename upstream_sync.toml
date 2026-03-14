@@ -1,0 +1,28 @@
+extension_toml = "extension.toml"
+repository_url = "https://github.com/tree-sitter-grammars/tree-sitter-markdown"
+
+[[grammars]]
+manifest_name = "markdown"
+
+[[grammars]]
+manifest_name = "markdown_inline"
+
+[[queries]]
+source = "tree-sitter-markdown/queries/highlights.scm"
+target = "languages/markdown/highlights.scm"
+transform = "markdown_block_highlights"
+
+[[queries]]
+source = "tree-sitter-markdown/queries/injections.scm"
+target = "languages/markdown/injections.scm"
+transform = "markdown_block_injections"
+
+[[queries]]
+source = "tree-sitter-markdown-inline/queries/highlights.scm"
+target = "languages/markdown-inline/highlights.scm"
+transform = "markdown_inline_highlights"
+
+[[queries]]
+source = "tree-sitter-markdown-inline/queries/injections.scm"
+target = "languages/markdown-inline/injections.scm"
+transform = "markdown_inline_injections"
